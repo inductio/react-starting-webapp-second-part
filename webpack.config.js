@@ -1,7 +1,20 @@
 /**
  * Created by Oleksandr_Shustrov on 4/4/2016.
  */
+'use strict';
 module.exports = {
+    module: {
+        loaders: [
+            {
+                test: /\.jsx?$/,
+                loader: 'babel',
+                exclude: /node_modules/,
+                query: {
+                    presets: ['react', 'es2015']
+                }
+            }
+        ]
+    },
     entry: {
         main: [
             './src/main.js'
@@ -10,13 +23,4 @@ module.exports = {
     output: {
         filename: './public/[name].js'
     },
-    module: {
-        loaders: [
-            {
-                test: /\.jsx?$/,
-                exclude: /node_modules/,
-                loader: 'babel'
-            }
-        ]
-    }
 }
