@@ -3,7 +3,12 @@
  */
 import React from 'react';
 import App from './components/App.jsx';
-
+import Comp from './components/Comp.jsx';
 var rootWrp = document.getElementById("root");
 
-React.render(<App />, rootWrp);
+React.render(
+    <div>
+        <Comp />
+        <App />
+    </div>,
+    rootWrp);
