@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --progress --display-errors"
+    "build": "webpack --debug --devtool source-map --output-pathinfo"
   },
   "author": "",
   "license": "ISC",
