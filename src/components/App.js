@@ -1,26 +1,25 @@
-import React from 'react';
+import React, {Component} from 'react';
 
-class App extends React.Component {
+class App extends Component {
 
-    constructor(){
+    constructor() {
         super();
         this.state = {
             messages: [
                 'messages 1 -- hi there, how are you?',
                 'messages 2 -- I am fine, and you?'
             ]
-        }
+        };
+        this.renderMessages = this.renderMessages.bind(this);
     }
 
-    render(){
-        var messageNodes = this.state.messages.map((message)=> {
-            return (
-                <div>{message}</div>
-            );
-        });
+    renderMessages() {
+        return this.state.messages.map((message)=> <div>{message}</div>);
+    };
 
+    render() {
         return (
-            <div>{messageNodes}</div>
+            <div>{this.renderMessages()}</div>
         );
     }
 
