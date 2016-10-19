@@ -6,7 +6,7 @@ class Comp extends React.Component {
         super();
         this.state = {
             messages: [
-                'ho ho oh'
+                'messages 3 -- ho ho oh'
             ]
         }
     }
